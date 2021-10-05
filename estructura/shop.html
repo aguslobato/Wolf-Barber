@@ -1,0 +1,278 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <script src="../js/popper.min.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     <link rel="stylesheet" href="../css/estructura.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="../css/sweetalert2.min.css">
+
+     <title>Productos | Wolf Barber</title>
+ </head>
+
+ <body>
+
+     <!-- Barra de Navegacion -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="container-fluid">
+             <a class="navbar-brand" href="../home.html"><img src="../imagenes/fondo/logo.png" alt=""></a>
+             <span id="titulo-pagina" class="navbar-text">
+                 WOLF BARBER
+             </span>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarText">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                         <a class="nav-link active" aria-current="page" href="../home.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="./informacion.html">Contacto</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="./informacion.html">Nosotros</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="./shop.html">Productos</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="./cortes.html">Cortes</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="./barbas.html">Barbas</a>
+                     </li>
+                 </ul>
+                 <div class="collapse navbar-collapse" id="navbarCollapse">
+                     <ul class="navbar-nav mr-auto">
+                         <li class="nav-item dropdown">
+                             <img id="shop" src="../imagenes/fondo/carrito.jpg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                 width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                 aria-expanded="false"></img>
+                             <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                 <table id="lista-carrito" class="table">
+                                     <thead>
+                                         <tr>
+                                             <th>Imagen</th>
+                                             <th>Nombre</th>
+                                             <th>Precio</th>
+                                             <th></th>
+                                         </tr>
+                                     </thead>
+                                     <tbody></tbody>
+                                 </table>   
+
+                                 <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                 <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                     Compra</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </nav>
+
+     <main>
+         <div class="container-shop" id="lista-productos">  
+             <div class="card-deck mb-3 text-center">
+                
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Kit Maquina</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/kit-maquina-peines.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">9000</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                     </div>
+                 </div>
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Asiento Barberia</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/asiento.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">30000</span></h1>
+                         <h2 class="titulo-secundario"> </h2>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                     </div>
+                 </div> 
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Navaja Suiza</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/navaja.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">4000</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                     </div>
+                 </div>
+
+             </div>
+
+             <div class="card-deck mb-3 text-center">
+                
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Maquina Rasuradora</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/maquina-rasuradora.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">5900</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
+                     </div>
+                 </div>
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Tijera</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/tijera.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">5769</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
+                     </div>
+                 </div>
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Capa</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/capa.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">2599</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
+                     </div>
+                 </div>
+
+             </div>
+
+             <div class="card-deck mb-3 text-center">
+                
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Tinico Capilar</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/tinico-capilar-fortalecedor.jpeg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">1800</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="7">Comprar</a>
+                     </div>
+                 </div>
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Cepillo para Barba</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/cepillo-barba.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">869</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="8">Comprar</a>
+                     </div>
+                 </div>
+
+                 <div class="card mb-4 shadow-sm">
+                     <div class="card-header">
+                         <h4 class="my-0 font-weight-bold">Tijera para Volumen</h4>
+                     </div>
+                     <div class="card-body">
+                         <img src="../imagenes/productos/tijera-volumen.jpg" class="card-img-top">
+                         <h1 class="card-title pricing-card-title precio">Precio: $<span class="">5397</span></h1>
+                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="9">Comprar</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </main>
+
+
+     <!-- Redes sociales -->
+     <div class="container-redes">
+         <input type="checkbox" id="btn-mas">
+         <div class="redes">
+             <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+             <a href="https://api.whatsapp.com/send?phone=+542974782511" class="fa fa-whatsapp icono"></a>
+             <a href="https://twitter.com/" class="fa fa-twitter"></a>
+             <a href="https://ar.pinterest.com/" class="fa fa-pinterest"></a>
+         </div>
+         <div class="btn-mas">
+             <label for="btn-mas" class="fa fa-plus"></label>
+             <a href="" class="fas fa-arrow-up"></a>
+         </div>
+     </div>
+
+     <footer>
+         <div class="main-content">
+             <div class="left box">
+                 <h2>Nosotros</h2>
+                 <div class="content">
+                     <p>Wolf Barber El concepto desde aquel entonces hasta ahora, ha ido migrando año tras año, lo cual hace que hoy en dia se destaque como peluquería y barbería clásica tradicional de los años 20.</p>
+                     <div class="social">
+                         <a href="#"><span class="fab fa-facebook-f"></span></a>
+                         <a href="#"><span class="fab fa-twitter"></span></a>
+                         <a href="#"><span class="fab fa-instagram"></span></a>
+                         <a href="#"><span class="fab fa-youtube"></span></a>
+                     </div>
+                 </div>
+             </div>
+             <div class="center box">
+                 <h2>Contacto</h2>
+                 <div class="content">
+                     <div class="place">
+                         <span class="fas fa-map-marker-alt"></span>
+                         <span class="text">Cordoba, Argentina</span>
+                     </div>
+                     <div class="phone">
+                         <span class="fas fa-phone-alt"></span>
+                         <span class="text">+54 297-478-2511</span>
+                     </div>
+                     <div class="email">
+                         <span class="fas fa-envelope"></span>
+                         <span class="text">agustinlobato82@gmail.com</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="right box">
+                 <h2>NavBar</h2>
+                 <div class="content">
+                     <a href="../home.html">Inicio</a>
+                     <a href="./barbas.html">Barbas</a>
+                     <a href="./shop.html">Productos</a>
+                     <a href="./cortes.html">Cortes</a>
+                     <a href="./informacion.html">Contacto</a>
+                     <a href="./informacion.html">Nosotros</a>
+                 </div>
+             </div>
+         </div>
+         <div class="bottom">
+             <center>
+                 <span class="credit">Creado por <a href="../home.html">WolfBarber</a> | </span>
+                 <span class="far fa-copyright"></span><span> 2020 Todos los derechos reservados.</span>
+             </center>
+         </div>
+     </footer>
+
+     <script src="../js/jquery-3.4.1.min.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/sweetalert2.min.js"></script>
+     <script src="../js/carrito.js"></script>
+     <script src="../js/pedido.js"></script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+     <script src="https://code.jquery.com"></script>
+     <script src="https://kit.fontawesome.com/a18a484923.js" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ </body>
+
+ </html>

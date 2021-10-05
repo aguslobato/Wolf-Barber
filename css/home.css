@@ -1,0 +1,960 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Cormorant+Garamond:wght@500&family=Hahmlet:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+ body{
+     background-color: rgb(255, 255, 255) !important; 
+}
+ /*Redes Sociales*/
+ #btn-mas{
+     display: none;
+     z-index: 99;
+}
+ .container-redes{
+     position: fixed;
+     bottom: 30px;
+     right: 30px;
+     z-index: 99;
+}
+ .redes a, .btn-mas label, .btn-mas a{ 
+     display: block;
+     text-decoration: none;
+     background: rgb(90, 28, 28);
+     color: #ffffff;;
+     width: 55px;
+     height: 55px;
+     line-height: 55px;
+     text-align: center;
+     border: 2px solid rgb(255, 255, 255);
+     border-radius: 50%;
+     box-shadow: 0px 7px 10px rgba(255, 255, 255, 0.4);
+     transition: all 500ms ease;
+     margin: 20px 0;
+     z-index: 99;
+}
+ .redes a:hover{
+     background: rgb(90, 28, 28);
+     color: #ffffff;
+     transition: all 500ms ease;
+     transform: rotate(360deg);
+     z-index: 99;
+}
+ .redes a{
+     margin-bottom: -15px;
+     opacity: 0;
+     visibility: hidden;
+     z-index: 99;
+}
+ #btn-mas:checked~ .redes a{
+     margin-bottom: 10px;
+     opacity: 1;
+     visibility: visible;
+     z-index: 99;
+}
+ .btn-mas label, .btn-mas a{
+     cursor: pointer;
+     background: rgb(90, 28, 28);
+     font-size: 25px;
+     z-index: 99;
+}
+ #btn-mas:checked ~ .btn-mas label{
+     transform: rotate(180deg);
+     font-size: 28px;
+     color: #fff;
+     background: rgb(90, 28, 28);
+     z-index: 99;
+}
+ .swal-overlay {
+     background-color: rgba(165, 43, 43, 0.548);
+}
+ .container-fluid img{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     border: 2px solid rgb(58, 1, 1);
+}
+ .navbar-text{
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 25px;
+}
+ .nav-item{
+     font-family: 'Amiri', serif;
+     font-size: 20px;
+     text-align: center;
+}
+ .banner-descripcion p{
+     opacity: 0.8;
+     margin-bottom: 2em;
+     color: #fff;
+     font-size: 22px;
+     font-family: 'Cormorant Garamond', serif;
+}
+ .banner-descripcion a{
+     border: 1px solid rgb(255, 255, 255);
+     padding: 0.6em 3.5em;
+     margin: auto;
+     text-decoration: none;
+     font-size: 20px;
+     color: #fff;
+     font-family: 'Cormorant Garamond', serif;
+}
+ .banner-descripcion a:hover{
+     color: rgb(0, 0, 0);
+     background: #fff;
+     border: #000 solid 1px;
+     transition: .5s;
+}
+ .banner-descripcion h1{
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 40px;
+     color: #fff;
+}
+ .banner-descripcion h2{
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 35px;
+     color: #fff;
+}
+ .banner{
+     width: 100%;
+     height: 1000px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     background: center fixed url(../imagenes/fondo/fondo-parallax.jpg);
+}
+ .banner-descripcion{
+     width: 90%;
+     max-width: 1000px;
+}
+ .container{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 1200px;
+     padding: 2em;
+     flex-wrap: wrap;
+     z-index: 1;
+}
+ .container .card{
+     position: relative;
+     width: 280px;
+     height: 400px;
+     margin: 30px;
+     box-shadow: 20px 20px 50px rgb(0,0,0,0.5);
+     border-radius: 15px;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     border-top: 1px solid rgba(0, 0, 0, 0.5);
+     border-left: 1px solid rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(5px);
+}
+ #corte-3{
+     background-image: url(../imagenes/pelo/corte-3.jpg);
+     background-position: center;
+     background-size: cover;
+}
+ #corte-2{
+     background-image: url(../imagenes/pelo/corte-2.jpg);
+     background-position: center;
+     background-size: cover;
+}
+ #corte-1{
+     background-image: url(../imagenes/pelo/corte-1.jpg);
+     background-position: center;
+     background-size: cover;
+}
+ .container .card .content{
+     padding: 20px;
+     text-align: center;
+     transform: translateY(100px);
+     opacity: 0;
+     transition: 0.5s; 
+}
+ .container .card:hover .content{
+     transform: translateY(-120px);
+     opacity: 1;
+}
+ .container .card .content h3{
+     font-size: 30px;
+     font-family: 'Cormorant Garamond', serif;
+     color: #fff;
+}
+ .container .card .content a{
+     position: relative;
+     display: inline-block;
+     padding: 8px 20px;
+     margin: 15px;
+     color: #fff;
+     border: 1px solid #fff ;
+     text-decoration: none;
+     font-family: 'Cormorant Garamond', serif;
+     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+}
+ .container .card .content a:hover{
+     background: rgb(0, 0, 0);
+     color: #fff;
+     border: 1px solid #fff;
+     transition: .5s;
+}
+ .container .card .content p{
+     font-size: 20px;
+     font-family: 'Amiri', serif;
+     color: rgb(255, 255, 255);
+}
+ .barberia{
+     display: inline-block;
+     align-items: center;
+     text-align: center;
+     background: rgb(0, 0, 0);
+     width: 100%;
+     padding: 4em;
+}
+ .barberia-contenedor{
+     display: flex;
+     justify-content:center;
+     padding: 2em;
+}
+ .imagen-barberia img{
+     width: 30em;
+     height: 25em;
+}
+ .imagen-barberia{
+     display: inline-block;
+}
+ .contenido-barberia{
+     width: 80%;
+     display: inline-block;
+     margin: 2em;
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 18px;
+     color: #ffffff;
+}
+ .contenido-barberia a{
+     color: rgb(255, 255, 255);
+     border: solid 1px rgb(255, 255, 255);
+     padding: 8px 20px;
+     text-decoration: none;
+}
+ #nuestro-equipo{
+     background-color: rgb(39, 3, 3);
+     border: solid 1px rgb(39, 3, 3);
+}
+ #nuestro-equipo:hover{
+     background-color: rgb(54, 5, 5);
+     color: rgb(255, 255, 255);
+     border: solid 1px rgb(255, 255, 255);
+     padding: 8px 20px;
+     text-decoration: none;
+     transition: .5s;
+}
+ .contenido-barberia a:hover{
+     color: rgb(255, 255, 255);
+     background: rgb(39, 39, 39);
+     transition: .5s;
+}
+ .contenido-barberia h1::after{
+     display: block;
+     width: 35%;
+     height: 2px;
+     content: "";
+     margin: auto;
+     background-color: rgb(58, 1, 1);
+}
+ .nuestro-servicio{
+     background: rgb(255, 255, 255);
+     color: #000;
+     display: flex;
+     justify-content: center;
+} 
+ .nuestro-servicio-contenedor{
+     display: flex;
+     justify-content: center;
+     max-width: 1400px;
+     padding: 2em;
+}
+ .que-ofrecemos{
+     display: inline-block;
+     width: 300px;
+     margin: 4em;
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 19px;
+     text-align: center;
+}
+ .que-ofrecemos .bebida-cortesia{
+     color: rgb(56, 2, 2);
+     font-family: 'Tinos', serif;
+     font-weight: 300;
+     font-size: 16px;
+}
+ .que-ofrecemos h2{
+     text-align: center;
+     margin-bottom: 1em;
+     font-family: 'Tinos', serif;
+}
+ .que-ofrecemos h2::after{
+     display: block;
+     width: 35%;
+     height: 2px;
+     content: "";
+     margin: auto;
+     background-color: rgb(58, 1, 1);
+}
+ .que-ofrecemos a{
+     background: none;
+     border: 1px rgb(58, 1, 1) solid;
+     font-family: 'Cormorant Garamond', serif;
+     text-decoration: none;
+     color: #000;
+     display: flex;
+     justify-content: center;
+     padding: 8px 20px;
+}
+ .que-ofrecemos a:hover{
+     color: rgb(255, 255, 255);
+     background: rgb(0, 0, 0);
+     border: 1px rgb(58, 1, 1) solid;
+     transition: .5s;
+}
+ .distintos-servicios{
+     width: 70%;
+     display: inline-block;
+     margin: 4em;
+}
+ .distintos-servicios img{
+     display: inline-block;
+     padding: 7px;
+     width: 50px;
+     height: 50px;
+     border: 1px solid rgb(39, 3, 3);
+     border-radius: 50%;
+}
+ .servicio{
+     display: flex;
+     margin-bottom: 3em;
+}
+ .servicio-header{
+     display: inline-block;
+}
+ .servicio-body{
+     display: inline-block;
+}
+ .servicio-body h2{
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 20px;
+     margin:0 10px;
+}
+ .servicio-body p{
+     margin: 10px;
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 17px;
+}
+ .nuestro-equipo{
+     background: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+}
+ .nuestro-equipo-contenedor{
+     display: flex;
+     justify-content: center;
+     max-width: 1400px;
+     padding: 2em;
+}
+ .equipo{
+     width: 60%;
+     display: inline-block;
+     margin: 4em;
+}
+ .equipo-header h2{
+     font-family: 'Tinos', serif;
+     text-align: center;
+     font-size: 40px;
+     margin-bottom: 0.5em;
+}
+ .equipo-header h2::after{
+     display: block;
+     width: 35%;
+     height: 2px;
+     content: "";
+     margin: auto;
+     background-color: rgb(255, 255, 255);
+}
+ .equipo-body{
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 18px;
+     text-align: justify;
+}
+ .equipo-body a{
+     background: none;
+     border: 1px rgb(255, 255, 255) solid;
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 20px;
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+     padding: 10px 0;
+     margin-top: 20px;
+}
+ .equipo-body a:hover{
+     color: rgb(0, 0, 0);
+     background: #fff;
+     border: solid 1px #000;
+     transition: .5s;
+}
+ .integrantes-equipo img{
+     width: 22em;
+     height: 27em;
+}
+ .integrantes-equipo{
+     display: inline-block;
+     width:40%;
+     margin: 3em;
+}
+ .swiper-container {
+     width: 100%;
+     height: 100%;
+     margin: 2em 0;
+     padding: 1em;
+}
+ .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #fff;
+     /* Center slide text vertically */
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     -webkit-align-items: center;
+     align-items: center;
+}
+ .swiper-slide img {
+     display: block;
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+}
+ .content1{
+     position: relative;
+     margin: 130px auto;
+     text-align: center;
+     padding: 0 20px;
+}
+ .content1 .text{
+     font-size: 2.5rem;
+     font-weight: 600;
+     color: #ffffff;
+}
+ .content1 .p{
+     font-size: 2.1875rem;
+     font-weight: 600;
+     color: #ffffff;
+}
+ footer{
+     padding: 1em;
+     bottom: 0px;
+     width: 100%;
+     background: #111;
+     color: #fff;
+     font-family: 'Vollkorn', serif;
+}
+ input{
+     color: #fff;
+}
+ textarea{
+     color: #fff;
+}
+ .main-content{
+     display: flex;
+}
+ .main-content .box{
+     flex-basis: 50%;
+     padding: 10px 20px;
+}
+ .box h2{
+     font-size: 1.125rem;
+     font-weight: 400;
+     text-transform: uppercase;
+}
+ .box .content{
+     margin: 20px 0 0 0;
+     position: relative;
+}
+ .box .content:before{
+     position: absolute;
+     content: '';
+     top: -10px;
+     height: 2px;
+     width: 100%;
+     background: #424242;
+}
+ .box .content:after{
+     position: absolute;
+     content: '';
+     height: 2px;
+     width: 15%;
+     background: #f12020;
+     top: -10px;
+}
+ .left .content p{
+     text-align: justify;
+}
+ .left .content .social{
+     margin: 20px 0 0 0;
+}
+ .left .content .social a{
+     padding: 0 2px;
+}
+ .left .content .social a span{
+     height: 40px;
+     width: 40px;
+     background: #1a1a1a;
+     color: #fff;
+     line-height: 40px;
+     text-align: center;
+     font-size: 18px;
+     border-radius: 5px;
+     transition: 0.3s;
+}
+ .left .content .social a span:hover{
+     background: #f12020;
+}
+ .center .content .fas{
+     font-size: 18px;
+     background: #1a1a1a;
+     height: 40px;
+     width: 40px;
+     line-height: 40px;
+     text-align: center;
+     border-radius: 50%;
+     transition: 0.3s;
+     cursor: pointer;
+}
+ .center .content .fas:hover{
+     background: #f12020;
+}
+ .center .content .text{
+     font-size: 1.0625rem;
+     font-weight: 400;
+     padding-left: 10px;
+}
+ .center .content .phone{
+     margin: 15px 0;
+}
+ .right .content a{
+     color: #fff;
+     text-decoration: none;
+     margin: 7px;
+}
+ .right .content a:hover{
+     border-bottom: 2px solid #f12020;
+     transition: .1s;
+}
+ .bottom center{
+     padding: 5px;
+     font-size: 0.9375rem;
+     background: #151515;
+}
+ .bottom center span{
+     color: #ffffff;
+}
+ .bottom center a{
+     color: #f12020;
+     text-decoration: none;
+}
+ .bottom center a:hover{
+     text-decoration: underline;
+}
+ @media screen and (max-width: 900px) {
+     footer{
+         position: relative;
+         bottom: 0px;
+    }
+     .main-content{
+         flex-wrap: wrap;
+         flex-direction: column;
+    }
+     .main-content .box{
+         margin: 5px 0;
+    }
+}
+
+ @media (max-width: 1100px){
+
+     .imagen-barberia img{
+         width: 25em;
+         height: 20em;
+    }
+     .imagen-barberia{
+         display: inline-block;
+    }
+     .contenido-barberia{
+         width: 60%;
+         margin: 0 2em;
+         font-size: 16px;
+    }
+}
+ @media (max-width: 800px){
+     .barberia{
+         display: block;
+         width: 100%;
+         padding: 2em;
+    }
+     .barberia-contenedor{
+         padding: 1em;
+    }
+     .imagen-barberia img{
+         width: 20em;
+         height: 15em;
+    }
+     .imagen-barberia{
+         display: inline-block;
+    }
+     .contenido-barberia{
+         width: 70%;
+         display: inline-block;
+         margin: 1em;
+    }
+     .nuestro-servicio{
+         background: rgb(255, 255, 255);
+         color: #000;
+         display: flex;
+         justify-content: center;
+    }
+     .nuestro-servicio-contenedor{
+         display: flex;
+         justify-content: center;
+         max-width: 1400px;
+         padding: 2em;
+    }
+     .que-ofrecemos{
+         display: inline-block;
+         width: 300px;
+         margin: 2em;
+         font-family: 'Cormorant Garamond', serif;
+         font-size: 19px;
+         text-align: center;
+    }
+     .que-ofrecemos .bebida-cortesia{
+         color: rgb(56, 2, 2);
+         font-family: 'Tinos', serif;
+         font-weight: 300;
+         font-size: 16px;
+    }
+     .que-ofrecemos h2{
+         text-align: center;
+         margin-bottom: 1em;
+         font-family: 'Tinos', serif;
+    }
+     .que-ofrecemos h2::after{
+         display: block;
+         width: 35%;
+         height: 2px;
+         content: "";
+         margin: auto;
+         background-color: rgb(58, 1, 1);
+    }
+     .que-ofrecemos a{
+         background: none;
+         border: 1px rgb(58, 1, 1) solid;
+         font-family: 'Cormorant Garamond', serif;
+         text-decoration: none;
+         color: #000;
+         display: flex;
+         justify-content: center;
+         padding: 8px 20px;
+    }
+     .que-ofrecemos a:hover{
+         color: rgb(255, 255, 255);
+         background: rgb(0, 0, 0);
+         border: 1px rgb(58, 1, 1) solid;
+         transition: .5s;
+    }
+     .distintos-servicios{
+         width: 70%;
+         display: inline-block;
+         margin: 4em;
+    }
+     .distintos-servicios img{
+         display: inline-block;
+         padding: 7px;
+         width: 50px;
+         height: 50px;
+         border: 1px solid rgb(39, 3, 3);
+         border-radius: 50%;
+    }
+     .servicio{
+         display: flex;
+         margin-bottom: 3em;
+    }
+     .servicio-header{
+         display: inline-block;
+    }
+     .servicio-body{
+         display: inline-block;
+    }
+     .equipo{
+         width: 60%;
+         display: inline-block;
+         margin: 2em;
+    }
+}
+ @media (max-width:480px){
+     .barberia{
+         display: flex;
+         justify-content: center;
+         margin: 0;
+    }
+     .barberia-contenedor{
+         display: flexbox;
+         flex-wrap: wrap;   
+    }
+     .contenido-barberia a{
+         display: inline-block;
+         margin: 10px;
+    }
+     .nuestro-servicio{
+         display: flex;
+         justify-content: center;
+    }
+     .nuestro-servicio-contenedor{
+         display: flexbox;
+         flex-wrap: wrap;
+         padding: 20px;
+    }
+     .nuestro-equipo{
+         display: flex;
+         justify-content: center;
+         margin: 0;
+    }
+     .nuestro-equipo-contenedor{
+         display: flexbox;
+         flex-wrap: wrap;
+         padding: 0px;
+    }
+     .integrantes-equipo{
+         display: flex;
+         justify-content: center;
+    }
+     .integrantes-equipo img{
+         width: 20em;
+         height: 20em;
+    }
+     .swiper-container {
+         width: 100%;
+         height: 100%;
+      } 
+     .swiper-slide {
+         text-align: center;
+         font-size: 18px;
+         background: #fff; 
+         /* Center slide text vertically */
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         display: flex;
+         -webkit-box-pack: center;
+         -ms-flex-pack: center;
+         -webkit-justify-content: center;
+         justify-content: center;
+         -webkit-box-align: center;
+         -ms-flex-align: center;
+         -webkit-align-items: center;
+         align-items: center;
+    }
+     .swiper-slide img {
+         margin: 0;
+         display: block;
+         width: 100%;
+         height: 700px;
+         object-fit: cover;
+    }
+}
+ @media (min-width: 2000px){
+     .banner{
+         width: auto;
+         height: 2000px !important;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         background: center fixed url(../imagenes/fondo/fondo-parallax-grande.jpg) !important;
+         background-size: cover !important;
+    }
+     /*Redes Sociales*/
+     .container-redes{
+         bottom: 30px;
+         right: 30px;
+    }
+     .redes a, .btn-mas label, .btn-mas a{ 
+         width: 95px;
+         height: 95px;
+         line-height: 95px;
+         font-size: 35px;
+         margin: 30px 0;
+    }
+     .btn-mas label, .btn-mas a{
+         font-size: 45px;
+    }
+     #btn-mas:checked ~ .btn-mas label{
+         font-size: 40px;
+    }
+     .container-fluid img{
+         width: 130px;
+         height: 130px;
+    }
+     .navbar-text{
+         font-size: 35px;
+    }
+     .nav-item{
+         font-size: 40px;
+    }
+     .banner-descripcion p{
+         font-size: 30px;
+    }
+     .banner-descripcion a{
+         font-size: 30px;
+    }
+     .banner-descripcion h1{
+         font-size: 45px;
+    }
+     .banner-descripcion h2{
+         font-size: 40px;
+    }
+     .container .card{
+         width: 380px;
+         height: 500px; 
+    }
+     .container .card .content h3{
+         font-size: 40px;
+    }
+     .container .card .content a{
+         font-size: 36px;
+    }
+     .container .card .content p{
+         font-size: 30px;
+    }
+     .barberia{
+         width: 100%;
+         padding: 6em;
+    }
+     .barberia-contenedor{
+         padding: 4em;
+    }
+     .imagen-barberia img{
+         width: 40em;
+         height: 35em;
+    }
+     .contenido-barberia{
+         width: 80%;
+         font-size: 30px;
+    }
+     .contenido-barberia a{
+         padding: 10px 20px;
+    }
+     #nuestro-equipo:hover{
+         padding: 10px 20px;
+    }
+     .nuestro-servicio-contenedor{
+         max-width: 2400px;
+         padding: 4em;
+    }
+     .que-ofrecemos{
+         width: 500px;
+         font-size: 34px;
+    }
+     .que-ofrecemos h2{
+         font-size: 50px
+    }
+     .que-ofrecemos .bebida-cortesia{
+         font-size: 28px;
+    }
+     .que-ofrecemos a{
+         padding: 10px 20px;
+    }
+     .distintos-servicios img{
+         padding: 12px;
+         width: 90px;
+         height: 90px;
+    }
+     .servicio{
+         margin: 3em 0;
+    }
+     .servicio-body h2{
+         font-size: 35px;
+         margin:0 20px;
+    } 
+     .servicio-body p{
+         margin: 20px;
+         font-size: 29px;
+    }
+     .nuestro-equipo-contenedor{
+         max-width: 2400px;
+         padding: 4em;
+    }
+     .equipo{
+         width: 70%;
+         margin: 6em;
+    }
+     .equipo-header h2{
+         font-size: 50px;
+         margin-bottom: 1em;
+    }
+     .equipo-body{
+         font-size: 30px;
+    }
+     .equipo-body a{
+         font-size: 30px;
+         padding: 20px 0;
+    }
+     .integrantes-equipo img{
+         width: 30em;
+         height: 36em;
+    }
+     .swiper-container {
+         padding: 2em;
+    }
+     footer{
+         padding: 3em;
+    }
+     .main-content .box{
+         padding: 20px 20px;
+    }
+     .box h2{
+         font-size: 28px;
+    }
+     .left .content .social a span{
+         height: 60px;
+         width: 60px;
+         line-height: 60px;
+         font-size: 25px;
+    }
+     .left p{
+         font-size: 26px;
+    } 
+     .center .content .fas{
+         font-size: 25px;
+         height: 60px;
+         width: 60px;
+         line-height: 60px;
+    }
+     .center .content .text{
+         font-size: 24px;
+    }
+     .right .content a{
+         margin: 10px;
+         font-size: 25px;
+    }
+     .bottom center{
+         padding: 10px;
+         font-size: 22px;
+    }
+}
